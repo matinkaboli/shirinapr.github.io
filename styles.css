@@ -1,3 +1,35 @@
+:root {
+  --wine-red: #840c24;
+  --faded-pink: #e9a6ba;
+  --dusty-red: #ab5768;
+  --light-pink: #fff6fa;
+}
 body {
-  background-color: #eee;
+  background-color:var(--light-pink);
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.img1{
+  margin-top:-30px; 
+  margin-bottom:-25px;
+  width: 180px;
+  height: 140px;
+}
+.p1{
+  color: #840c24;
+  font-size: 15px;
+}
+.icons{
+  display: flex;
+  justify-content: center;
+  
+}
+.iconimg{
+  height:14px;
+  width:14px; 
+  margin-right: 5px;
 }
