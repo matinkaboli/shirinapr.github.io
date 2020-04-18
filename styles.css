@@ -1,35 +1,138 @@
 :root {
+  --border: #f6e9ee;
   --wine-red: #840c24;
-  --faded-pink: #e9a6ba;
   --dusty-red: #ab5768;
+  --faded-pink: #e9a6ba;
   --light-pink: #fff6fa;
 }
-body {
-  background-color:var(--light-pink);
+
+::selection {
+  color: #fec5e5;
+  background-color: #fc4c4e;
 }
+
+body {
+  direction: rtl;
+  font-family: 'Shabnam', sans-serif;
+  background-color: var(--light-pink);
+}
+
 .container{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+
 .img1{
-  margin-top:-30px; 
-  margin-bottom:-25px;
   width: 180px;
-  height: 140px;
+  height: 180px;
+  cursor: pointer;
+  margin-top:-50px;
+  margin-bottom:-55px;
 }
+
 .p1{
   color: #840c24;
-  font-size: 15px;
+  font-size: 12px;
 }
+
 .icons{
+  margin-top: 20px;
+  width: 60%;
+  height: 46px;
   display: flex;
+  align-items: center;
+  align-content: center;
+  padding-top: 5px;
   justify-content: center;
-  
+  border-top: 2px solid var(--border);
+  border-bottom: 2px solid var(--border);
 }
-.iconimg{
-  height:14px;
-  width:14px; 
-  margin-right: 5px;
+
+.iconimg {
+  height: 18px;
+  width: 18px;
+  margin-right: 15px;
+}
+
+.column {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: right;
+}
+
+.title-column {
+  font-size: 24px;
+  margin-top: 52px;
+  font-weight: bold;
+  color: var(--wine-red);
+}
+
+.months-buttons button {
+  color: var(--dusty-red);
+  font-size: 12px;
+  font-weight: 600;
+  width: 42px;
+  cursor: pointer;
+  height: 26px;
+  padding-bottom: 5px;
+  border-radius: 13px;
+  background-color: var(--light-pink);
+  border: solid 1px var(--light-pink);
+  transition: border 400ms;
+}
+
+.months-buttons button:hover {
+  color: var(--wine-red);
+  border: solid 1px var(--wine-red);
+}
+
+.article {
+  margin-top: 32px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid var(--border);
+}
+
+.top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.article-title {
+  font-size: 24px;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--wine-red);
+}
+
+.article-date {
+  font-size: 12px;
+  color: var(--faded-pink);
+}
+
+.article-content {
+  direction: rtl;
+  font-size: 14px;
+  color: var(--wine-red);
+  line-height: 1.71;
+}
+
+.article-comments {
+  display: flex;
+  font-size: 14px;
+  cursor: pointer;
+  align-items: center;
+  color: var(--faded-pink);
+}
+
+.article-comments img {
+  width: 12px;
+  height: 12px;
+  margin-left: 8px;
 }
