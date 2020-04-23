@@ -47,32 +47,51 @@ body {
   width: 180px;
   height: 180px;
   cursor: pointer;
-  margin-top:-50px;
+  margin-top:100px;
   margin-bottom:-55px;
 }
 
 .p1{
   color: #840c24;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .icons{
-  margin-top: 20px;
   width: 60%;
   height: 46px;
   display: flex;
+  padding-top: 5px;
+  margin-top: 100px;
   align-items: center;
   align-content: center;
-  padding-top: 5px;
+  flex-direction: column;
   justify-content: center;
-  border-top: 2px solid var(--border);
-  border-bottom: 2px solid var(--border);
+  /* border-top: 2px solid var(--border);
+  border-bottom: 2px solid var(--border); */
+}
+
+.line-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.line-container a {
+  padding: 0 5px;
+}
+
+.line {
+  width: 45%;
+  height: 2px;
+  background-color: var(--border);
 }
 
 .iconimg {
-  height: 18px;
   width: 18px;
-  margin-right: 15px;
+  height: 18px;
 }
 
 .column {
@@ -86,6 +105,7 @@ body {
 .title-column {
   font-size: 24px;
   margin-top: 52px;
+  margin-bottom: 15px;
   font-weight: bold;
   color: var(--wine-red);
 }
@@ -118,6 +138,7 @@ body {
 .top {
   width: 100%;
   display: flex;
+  margin-bottom: 20px;
   align-items: center;
   justify-content: space-between;
 }
@@ -146,6 +167,7 @@ body {
   display: flex;
   font-size: 14px;
   cursor: pointer;
+  margin-top: 24px;
   align-items: center;
   color: var(--faded-pink);
 }
@@ -157,6 +179,12 @@ body {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
+  .background {
+    height: 50vh;
+    background-position: top;
+    justify-content: flex-start
+  }
+
   .icons{
     width: 90%;
   }
