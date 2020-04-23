@@ -1,17 +1,282 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <meta name="keywords" content="blog, shirinapr"/>
+    <meta name="description" content="Shirin journals"/>
+    <meta name="subject" content="Shirinapr blog">
+    <meta name="language" content="FA">
+    <meta name="topic" content="journal">
+    <meta name="summary" content="Experiences and daily writing">
+    <meta name="Classification" content="Blog">
+    <meta name="author" content="Shirinapr">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="shortcut icon" href="https://blog.zilon.io/favicon.ico" />
     <meta charset="utf-8">
     <title>Shirin journals</title>
-    <link rel="stylesheet" href="styles.css">
+    <script>
+    function GetBC(lngPostid)
+ {
+     intTimeZone=12600;
+     strBlogId="shirinapr";
+     intCount=-1;
+     strResult="";
+     try {
+  for (i=0;i<BlogComments.length;i+=2)
+  {
+       if (BlogComments[i]==lngPostid)
+       intCount=BlogComments[i+1] ;
+  }
+         }  catch( e) {
+         }
+  if ( intCount==-1)  strResult="آرشیو نظرات";
+  if ( intCount==0)  strResult="نظر بدهید";
+  if ( intCount==1)  strResult="یک نظر";
+  if ( intCount>1)  strResult=intCount + " نظر" ;
+
+strUrl="/comments/?blogid=" +strBlogId + "&postid=" + lngPostid + "&timezone=" + intTimeZone ;
+strResult ="<a href=\"javascript:void(0)\" onclick=\"javascript:window.open('" + strUrl + "','blogfa_comments','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=500px')\" >" +  strResult + " </a>" ;
+
+document.write ( strResult ) ;
+}
+    </script>
+    <style>
+    :root {
+      --border: #f6e9ee;
+      --wine-red: #840c24;
+      --dusty-red: #ab5768;
+      --faded-pink: #e9a6ba;
+      --light-pink: #fff6fa;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ::selection {
+      color: #fec5e5;
+      background-color: #fc4c4e;
+    }
+
+    body {
+      direction: rtl;
+      font-family: 'Shabnam', sans-serif;
+      background-color: var(--light-pink);
+    }
+
+    .container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .background {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      background-image: url('https://blog.zilon.io/background8.jpg');
+      /* background-size: cover; */
+      /* background-attachment: fixed; */
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .img1{
+      width: 180px;
+      height: 180px;
+      cursor: pointer;
+      margin-top:100px;
+      margin-bottom:-55px;
+    }
+
+    .p1{
+      color: #840c24;
+      font-size: 14px;
+    }
+
+    .icons{
+      width: 60%;
+      height: 46px;
+      display: flex;
+      padding-top: 5px;
+      margin-top: 100px;
+      align-items: center;
+      align-content: center;
+      flex-direction: column;
+      justify-content: center;
+      /* border-top: 2px solid var(--border);
+      border-bottom: 2px solid var(--border); */
+    }
+
+    .line-container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      height: 50px;
+      margin-bottom: 20px;
+      justify-content: center;
+    }
+
+    .line-container a {
+      padding: 0 5px;
+    }
+
+    .line {
+      width: 45%;
+      height: 2px;
+      background-color: var(--border);
+    }
+
+    .iconimg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .column {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      text-align: right;
+    }
+
+    .title-column {
+      font-size: 24px;
+      margin-top: 52px;
+      margin-bottom: 15px;
+      font-weight: bold;
+      color: var(--wine-red);
+    }
+
+    .months-buttons {
+      display: flex;
+    }
+
+    .months-buttons button {
+      color: var(--dusty-red);
+      font-size: 12px;
+      /* font-weight: 600; */
+      width: auto;
+      cursor: pointer;
+      height: 26px;
+      border-radius: 13px;
+      padding: 0px 4px;
+      /* padding-bottom: 5px; */
+      background-color: var(--light-pink);
+      border: solid 1px var(--light-pink);
+      transition: border 400ms;
+    }
+
+    .months-buttons button:hover {
+      color: var(--wine-red);
+      border: solid 1px var(--wine-red);
+    }
+
+    .article {
+      margin-top: 32px;
+      padding-bottom: 24px;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .article p {
+      color: var(--wine-red);
+    }
+
+    .top {
+      width: 100%;
+      display: flex;
+      margin-bottom: 20px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .article-title {
+      font-size: 24px;
+      cursor: pointer;
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--wine-red);
+    }
+
+    .article-date {
+      font-size: 12px;
+      color: var(--faded-pink) !important;
+    }
+
+    .article-content {
+      direction: rtl;
+      font-size: 14px;
+      color: var(--wine-red);
+      line-height: 1.71;
+    }
+
+    .article-content p {
+      color: var(--wine-red);
+    }
+
+    .article-comments {
+      display: flex;
+      font-size: 14px;
+      cursor: pointer;
+      margin-top: 24px;
+      align-items: center;
+      color: var(--faded-pink);
+    }
+
+    .article-comments img {
+      width: 12px;
+      height: 12px;
+      margin-left: 8px;
+    }
+
+    .comment-style {
+      color: var(--faded-pink);
+      text-decoration: none;
+    }
+
+    .comment-style a {
+      color: var(--faded-pink);
+      text-decoration: none;
+    }
+
+    @media (min-width: 320px) and (max-width: 480px) {
+      .background {
+        height: 50vh;
+        background-position: top;
+        justify-content: flex-start
+      }
+
+      .icons{
+        width: 90%;
+      }
+
+      .column {
+        width: 90%;
+      }
+
+      .months-buttons {
+        overflow: scroll;
+      }
+
+      .months-buttons button {
+        height: auto;
+      }
+
+      .article-title {
+        font-size: 20px;
+      }
+    }
+    </style>
     <link href="https://cdn.rawgit.com/rastikerdar/shabnam-font/v5.0.1/dist/font-face.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <div class="container">
       <div class="background">
-        <a href="http://shirinapr.ir"><img class="img1" src="images/shirin-white.png"></a>
+        <a href="http://shirinapr.ir"><img class="img1" src="https://blog.zilon.io/shirin-white.png"></a>
         <p class="p1">تجربیات و روزمره نگاری</p>
 
         <div class="icons">
@@ -19,11 +284,11 @@
             <div class="line"></div>
 
             <a href="https://instagram.com/shirinjournals" target="_blank">
-              <img class="iconimg" src="images/instagram.png">
+              <img class="iconimg" src="https://blog.zilon.io/instagram.png">
             </a>
 
             <a href="https://twitter.com/shirinapr" target="_blank">
-              <img class="iconimg" src="images/twitter.png">
+              <img class="iconimg" src="https://blog.zilon.io/twitter.png">
             </a>
             <div class="line"></div>
           </div>
@@ -35,24 +300,32 @@
       <div class="column">
         <p class="title-column">نوشته ها</p>
         <div class="months-buttons">
-          <button>مهر</button>
-          <button>مهر</button>
+          <BlogArchive>
+            <a href="<-ArchiveLink->"><button><-ArchiveTitle-></button></a><br>
+          </BlogArchive>
         </div>
 
         <div class="articles">
-          <div class="article">
-            <div class="top">
-              <a href="#" class="article-title">دستاورد</a>
-              <p class="article-date">۱۵ مهر ۱۳۹۸</p>
-            </div>
+          <BLOGFA>
+            <div class="article">
+              <div class="top">
+                <a href="<-PostLink->" class="article-title"><-PostTitle-></a>
+                <p class="article-date"><-PostDate-></p>
+              </div>
 
-            <p class="article-content">دستاورد های ۹۸ من، شاید کمی اعتماد به نفس بود، روابط خوب بجز با فامیل و دوست های قدیمی هم مشمول دستاوردهام هست! چیزی که یاد گرفتم اینه که به دوست و‌ فامیل اصلا نباید اعتماد کرد.</p>
+              <p class="article-content"><-PostContent-></p>
 
-            <div class="article-comments">
-              <img src="images/comments.png" />
-              <span>مشاهده نظرات</span>
+              <div class="article-comments">
+                <img src="https://blog.zilon.io/comments.png" />
+                <BlogComment>
+                  <span dir="rtl" class="comment-style">
+                    <script type="text/javascript">GetBC(<-PostId->);</script>
+                  </span>
+                  <!-- <span dir="rtl" onclick="GetBC(<-PostId->);">نظر دهید</span> -->
+                </BlogComment>
+              </div>
             </div>
-          </div>
+          </BLOGFA>
         </div>
       </div>
     </div>
