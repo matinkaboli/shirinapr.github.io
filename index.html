@@ -243,6 +243,26 @@ document.write ( strResult ) ;
       text-decoration: none;
     }
 
+    .extended-button {
+      margin-top: 10px;
+      width: 91px;
+      height: 33px;
+      font-size: 14px;
+      line-height: 1.29;
+      text-align: center;
+      border-radius: 4px;
+      cursor: pointer;
+      color: var(--wine-red);
+      border: 1px solid var(--wine-red);
+      background-color: var(--light-pink);
+      transition: color, background-color 300ms;
+    }
+
+    .extended-button:hover {
+      color: white;
+      background-color: var(--wine-red);
+    }
+
     @media (min-width: 320px) and (max-width: 480px) {
       .background {
         height: 50vh;
@@ -314,6 +334,14 @@ document.write ( strResult ) ;
               </div>
 
               <p class="article-content"><-PostContent-></p>
+
+              <BlogExtendedPost>
+                <a href="<-PostLink->">
+                  <button type="button" class="extended-button">
+                    ادامه مطلب
+                  </button>
+                </a>
+              </BlogExtendedPost>
 
               <div class="article-comments">
                 <img src="https://blog.zilon.io/comments.png" />
