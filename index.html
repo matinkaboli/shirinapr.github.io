@@ -244,7 +244,7 @@ document.write ( strResult ) ;
     }
 
     .extended-button {
-      margin-top: 10px;
+      margin-right: 15px;
       width: 91px;
       height: 33px;
       font-size: 14px;
@@ -261,6 +261,26 @@ document.write ( strResult ) ;
     .extended-button:hover {
       color: white;
       background-color: var(--wine-red);
+    }
+
+    .article-tag {
+      padding-top: 24px;
+      transition: all 300ms;
+      text-decoration: none;
+      color: var(--faded-pink);
+    }
+
+    .article-tag:hover {
+      color: var(--wine-red);
+    }
+
+    .article-tags-container {
+      margin-top: 20px;
+      margin-bottom: -5px;
+    }
+
+    .article-tags-container span:last-child {
+      display: none;
     }
 
     @media (min-width: 320px) and (max-width: 480px) {
@@ -335,13 +355,12 @@ document.write ( strResult ) ;
 
               <p class="article-content"><-PostContent-></p>
 
-              <BlogExtendedPost>
-                <a href="<-PostLink->">
-                  <button type="button" class="extended-button">
-                    ادامه مطلب
-                  </button>
-                </a>
-              </BlogExtendedPost>
+              <div class="article-tags-container">
+                <BlogPostTags>
+                  <a title="<-TagName->" href="<-TagLink->" class="article-tag"><-TagName-></a>
+                  <span>،</span>
+                </BlogPostTags>
+              </div>
 
               <div class="article-comments">
                 <img src="https://blog.zilon.io/comments.png" />
@@ -351,11 +370,28 @@ document.write ( strResult ) ;
                   </span>
                   <!-- <span dir="rtl" onclick="GetBC(<-PostId->);">نظر دهید</span> -->
                 </BlogComment>
+
+                <BlogExtendedPost>
+                  <a href="<-PostLink->">
+                    <button type="button" class="extended-button">
+                      ادامه مطلب
+                    </button>
+                  </a>
+                </BlogExtendedPost>
               </div>
             </div>
           </BLOGFA>
         </div>
       </div>
     </div>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164817701-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-164817701-1');
+    </script>
   </body>
 </html>
